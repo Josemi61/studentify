@@ -27,8 +27,8 @@ jobs:
         aws-session-token: ${{ secrets.AWS_SESSION_TOKEN }}
     - name: Deploy Application
       run:
-        aws deploy create-deployment --application-name Studentify \
-          --deployment-group-name Backends \
+        aws deploy create-deployment --application-name UltimaPrectica \
+          --deployment-group-name ImplementacionUltimaPrectica \
           --github-location repository=${{ github.repository }},commitId=${{ github.sha }} \
           --region ${{ vars.REGION }} \
           --file-exists-behavior OVERWRITE
